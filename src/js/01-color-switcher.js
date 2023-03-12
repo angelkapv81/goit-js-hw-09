@@ -9,19 +9,20 @@
 // Остановить таймер.
 // Включить кнопку «Start».
 
-// Обратите внимание, что в этом решении используется переменная timerId, 
-// которая хранит идентификатор таймера, чтобы можно было остановить его позже при нажатии на кнопку «Stop». 
+// Обратите внимание, что в этом решении используется переменная timerId,
+// которая хранит идентификатор таймера, чтобы можно было остановить его позже при нажатии на кнопку «Stop».
 // Кроме того, мы используем свойство disabled для отключения/включения кнопки «Start».
+//
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const startBtn = document.querySelector("[data-start]");
-const stopBtn = document.querySelector("[data-stop]");
+const startBtn = document.querySelector('[data-start]');
+const stopBtn = document.querySelector('[data-stop]');
 let timerId;
 
-startBtn.addEventListener("click", () => {
+startBtn.addEventListener('click', () => {
   // Отключаем кнопку «Start»
   startBtn.disabled = true;
 
@@ -31,7 +32,7 @@ startBtn.addEventListener("click", () => {
   }, 1000);
 });
 
-stopBtn.addEventListener("click", () => {
+stopBtn.addEventListener('click', () => {
   // Останавливаем таймер
   clearInterval(timerId);
 
